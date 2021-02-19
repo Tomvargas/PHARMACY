@@ -142,7 +142,7 @@
                 android:layout_width="136dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                app:background="#03A9F4"
+
                 android:backgroundTint="#03A9F4"
                 android:text="Ok" />
 
@@ -156,7 +156,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                app:background="#4A5C65"
+
                 android:backgroundTint="#4A5C65"
                 android:text="Cancelar" />
         </LinearLayout>
