@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="tiposDeMedicina">
+        <item>Tabletas</item>
+        <item>Jarabe</item>
+        <item>Analgésico</item>
+        <item>Ampolla</item>
+        <item>Desparacitante</item>
+        <item>Via tópica</item>
+    </string-array>
+</resources>
