@@ -38,6 +38,18 @@ public class MainActivity extends AppCompatActivity {
 
         ok = findViewById(R.id.btnok);
         cancel = findViewById(R.id.btncancel);
+        cancel.setOnClickListener(new View.OnClickListener() {
+          @Override
+          public void onClick(View v) {
+              nombre.setText("");
+              cantidad.setText("");
+              cofarma.setChecked(false);
+              empsehar.setChecked(false);
+              cemefar.setChecked(false);
+              principal.setChecked(false);
+              secundaria.setChecked(false);
+          }
+      });
 
         ok.setOnClickListener(new View.OnClickListener() {
             @Override
