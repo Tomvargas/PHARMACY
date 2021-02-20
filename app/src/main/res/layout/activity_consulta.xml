@@ -6,25 +6,29 @@
     android:layout_height="match_parent"
     tools:context=".consulta">
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="26dp">
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="347dp"
+        android:layout_height="59dp"
+        android:padding="30px"
+        android:text="Pedidos realizados"
+        android:textColor="#03A9F4"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:padding="50px">
+    <ListView
+        android:id="@+id/pedidos"
+        style="@style/Widget.AppCompat.ListView"
+        android:layout_width="411dp"
+        android:layout_height="669dp"
+        android:layout_marginTop="3dp"
+        android:cacheColorHint="#FFFFFF"
+        android:padding="20px"
+        android:paddingBottom="5px"
+        app:layout_constraintTop_toBottomOf="@+id/textView8"
+        tools:layout_editor_absoluteX="0dp">
 
-            <ListView
-                android:id="@+id/pedidos"
-                style="@style/Widget.AppCompat.ListView"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:cacheColorHint="#FFFFFF" />
-        </LinearLayout>
-    </ScrollView>
+    </ListView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
