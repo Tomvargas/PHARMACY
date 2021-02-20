@@ -11,6 +11,8 @@ import android.graphics.BitmapFactory;
 import androidx.annotation.Nullable;
 
 import java.io.ByteArrayOutputStream;
+import java.util.ArrayList;
+import java.util.List;
 
 public class basededatos extends SQLiteOpenHelper {
     private static final String query = "CREATE TABLE IF NOT EXISTS pedido(medicina TEXT, tipo TEXT, cantidad TEXT, dist TEXT, suc TEXT);";
@@ -47,5 +49,31 @@ public class basededatos extends SQLiteOpenHelper {
         else return true;
     }
 
+    public List<Data> cursor(){
+        SQLiteDatabase MyDB = this.getWritableDatabase();
+        List<Data> mySuperList = new ArrayList<>();
+        Cursor cur = MyDB.rawQuery("Select * from pedido", null);
+        if (cur != null){
+            cur.moveToFirst();
+            while (cur.isAfterLast() == false) {
+                Data myTable = new Data();
+                myTable.medicina = (cur.getString(cur.getColumnIndex("medicina")));
+                myTable.tipo = (cur.getString(cur.getColumnIndex("tipo")));
+                myTable.cant = (cur.getString(cur.getColumnIndex("cantidad")));
+                myTable.dist = (cur.getString(cur.getColumnIndex("dist")));
+                myTable.suc = (cur.getString(cur.getColumnIndex("suc")));
+
+                mySuperList.add(myTable);
+                cur.moveToNext();
+            }
+        }
+        return mySuperList;
+    }
+
+    class Data{
+        String medicina, tipo, cant, dist, suc;
+    }
 
 }
+
+

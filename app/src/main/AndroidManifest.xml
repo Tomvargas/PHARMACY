@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Pedidos_farmaceuticos">
-        <activity android:name=".review"></activity>
+        <activity android:name=".consulta"></activity>
+        <activity android:name=".review" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

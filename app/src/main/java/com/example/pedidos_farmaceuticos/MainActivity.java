@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
     Spinner tipo;
     RadioButton cofarma, empsehar, cemefar;
     CheckBox principal, secundaria;
-    Button ok, cancel;
+    Button ok, cancel, consultas;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +38,14 @@ public class MainActivity extends AppCompatActivity {
 
         ok = findViewById(R.id.btnok);
         cancel = findViewById(R.id.btncancel);
+        consultas = findViewById(R.id.ordenesbtn);
+        consultas.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent con = new Intent(getApplicationContext(), consulta.class);
+                startActivity(con);
+            }
+        });
         cancel.setOnClickListener(new View.OnClickListener() {
           @Override
           public void onClick(View v) {
