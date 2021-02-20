@@ -42,6 +42,9 @@ public class review extends AppCompatActivity {
                 Boolean res = DB.insertar(medicamento,tipo,cantidad,distribuidora,sucursal);
                 if (res){
                     Toast.makeText(review.this, "Pedido enviado", Toast.LENGTH_SHORT).show();
+
+                    onBackPressed();
+
                 }else{
                     Toast.makeText(review.this, "Pedido no enviado", Toast.LENGTH_SHORT).show();
                 }
@@ -49,8 +52,7 @@ public class review extends AppCompatActivity {
         cancel=findViewById(R.id.cancelbtn);
         cancel.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v){
-                Intent intent  = new Intent(getApplicationContext(), MainActivity.class);
-                startActivity(intent);
+                onBackPressed();
             }});
     }
 }
